@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Information - NYC Income and Gym Correlation Study</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1><i class="fas fa-dumbbell"></i> NYC Fitness Research</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Fitness Info</a></li>
+                <li><a href="data.html">Data Analysis</a></li>
+                <li><a href="case-study.html">Case Studies</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="fitness-banner">
+            <div class="banner-content">
+                <h2>NYC Fitness Culture & Information</h2>
+                <p>Explore fitness trends, latest news, and professional advice across NYC districts</p>
+            </div>
+        </div>
+
+        <section class="container">
+            <div class="section-header">
+                <h2>Latest Fitness News</h2>
+                <p>Stay updated with the latest trends and developments in NYC's fitness industry</p>
+            </div>
+
+            <div class="fitness-news-grid">
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Luxury Fitness Club"
+                             loading="lazy"
+                             width="1470"
+                             height="980"
+                             onerror="this.onerror=null;this.src='images/placeholder-gym.jpg';">
+                        <div class="card-tag">News</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> 2023-11-15</span>
+                            <span><i class="far fa-user"></i> Researcher Li Ming</span>
+                        </div>
+                        <h3>Consumer Trends Analysis of Upper East Side Luxury Fitness Clubs</h3>
+                        <p>With rising income levels, luxury fitness clubs in the Upper East Side are experiencing significant membership growth. According to recent surveys, high-net-worth individuals' annual fitness spending has exceeded $5,000, a 35% increase from five years ago.</p>
+                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Fitness Studio">
+                        <div class="card-tag">Market Analysis</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> 2023-11-10</span>
+                            <span><i class="far fa-user"></i> Market Analyst Wang Hua</span>
+                        </div>
+                        <h3>Rise of Boutique Gyms in Midtown: Small Group Training Takes Center Stage</h3>
+                        <p>Boutique fitness studios in Midtown have seen explosive growth in the past two years, with small group professional training becoming popular among white-collar workers. Average per-class prices have increased from $35 to $50, yet booking rates remain above 85%.</p>
+                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Community Fitness">
+                        <div class="card-tag">Community Events</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> 2023-11-05</span>
+                            <span><i class="far fa-user"></i> Community Coordinator Zhang Wei</span>
+                        </div>
+                        <h3>Chinatown Community Fitness Program Receives City Government Funding</h3>
+                        <p>NYC government announces $1 million in funding for fitness facility upgrades in Chinatown and surrounding low-income communities, along with free fitness class programs. This initiative aims to bridge the fitness resource gap between different income groups.</p>
+                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="section-header">
+                <h2>NYC Fitness Consumption Data</h2>
+                <p>Price and Service Comparison of Fitness Facilities Across Districts</p>
+            </div>
+
+            <div class="fitness-cost">
+                <div class="cost-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fitness Type</th>
+                                <th>Monthly Cost (USD)</th>
+                                <th>Annual Cost (USD)</th>
+                                <th>Main Districts</th>
+                                <th>Service Features</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fas fa-crown"></i> Luxury Fitness Clubs</td>
+                                <td>200-500</td>
+                                <td>2,400-6,000</td>
+                                <td>Upper East Side, Upper West Side</td>
+                                <td>Premium equipment, personal trainers, spa services, gourmet dining</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-certificate"></i> Boutique Fitness Studios</td>
+                                <td>300-800</td>
+                                <td>3,600-9,600</td>
+                                <td>Upper East Side, Midtown</td>
+                                <td>Small group classes, professional guidance, specialty courses, personalized programs</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-store"></i> Mid-range Chain Gyms</td>
+                                <td>80-150</td>
+                                <td>960-1,800</td>
+                                <td>Midtown, Downtown</td>
+                                <td>24/7 access, standard equipment, basic group classes, multi-location access</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-hand-holding-usd"></i> Budget Gyms</td>
+                                <td>20-60</td>
+                                <td>240-720</td>
+                                <td>Downtown, Chinatown</td>
+                                <td>Basic equipment, no-frills service, self-service management</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-users"></i> Community Fitness Centers</td>
+                                <td>0-30</td>
+                                <td>0-360</td>
+                                <td>Chinatown & Surrounding Areas</td>
+                                <td>Government subsidized, basic facilities, community classes, public welfare</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cost-extra">
+                    <h3><i class="fas fa-plus-circle"></i> Additional Fitness Expenses</h3>
+                    <ul>
+                        <li><i class="fas fa-user-tie"></i> <strong>Personal Training:</strong> $80-200 per hour, up to $300-500/hour in high-income areas</li>
+                        <li><i class="fas fa-users"></i> <strong>Group Classes:</strong> $20-50 per session, popular classes like SoulCycle range from $40-75 per session</li>
+                        <li><i class="fas fa-tshirt"></i> <strong>Fitness Gear:</strong> $200-500 annually, premium brand spending can reach $1,000-2,500/year</li>
+                        <li><i class="fas fa-pills"></i> <strong>Nutrition Supplements:</strong> $50-200 monthly, precision nutrition planning services can cost $300-600/month</li>
+                        <li><i class="fas fa-mobile-alt"></i> <strong>Fitness Technology:</strong> Smartwatches, fitness app subscriptions, etc., annual spending $100-500</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="expert-tips">
+                <div class="tips-header">
+                    <h3><i class="fas fa-lightbulb"></i> Expert Fitness Tips</h3>
+                    <p>Guidance and advice from NYC's top personal trainers</p>
+                </div>
+                
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Cardio Training Program</h4>
+                            <p>For beginners, we recommend 3-4 moderate-intensity cardio sessions per week, 30-45 minutes each. As fitness improves, add High-Intensity Interval Training (HIIT) 1-2 times per week, 20-30 minutes per session, for better cardiovascular fitness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Strength Training Plan</h4>
+                            <p>Recommend 3-4 full-body strength training sessions weekly, focusing on compound movements for major muscle groups like squats, deadlifts, and bench presses. Beginners start with lower weights and higher reps (12-15 reps/set), intermediate trainers can gradually increase weight and decrease reps (8-12 reps/set).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Nutrition Guidelines</h4>
+                            <p>Fitness nutrition should be balanced, with protein intake recommended at 1.6-2.2g per kg of body weight, carbohydrates at 40-60% of total calories, and healthy fats at 20-35%. Eat a meal containing carbs and protein 2 hours before training, and replenish with protein and carbs within 30 minutes post-workout.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <div class="tip-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="tip-content">
+                            <h4>Recovery & Rest</h4>
+                            <p>Adequate rest is as important as muscle growth. Ensure 7-9 hours of quality sleep nightly, allow at least 48 hours between training the same muscle group. Schedule 1-2 complete rest days weekly, and regularly use foam rolling and other self-myofascial release techniques to promote recovery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="contact-form">
+                <h2><i class="fas fa-envelope"></i> Subscribe to Fitness Updates</h2>
+                <p>Want to receive regular updates on fitness news and research findings? Please leave your contact information</p>
+                <form id="subscribeForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" 
+                               id="name" 
+                               name="name" 
+                               placeholder="Enter your name" 
+                               required
+                               pattern="^[a-zA-Z\s]{2,20}$"
+                               title="Please enter a valid name (2-20 characters)">
+                        <span class="form-validation-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               placeholder="Enter your email address" 
+                               required
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                               title="Please enter a valid email address">
+                        <span class="form-validation-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Interested Topic:</label>
+                        <select id="interest" name="interest">
+                            <option value="all">All Fitness Info</option>
+                            <option value="workout">Training Plan</option>
+                            <option value="nutrition">Fitness Nutrition</option>
+                            <option value="market">Market Trends</option>
+                            <option value="research">Research Findings</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message or Suggestion:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Anything you want to tell us?"></textarea>
+                    </div>
+                    <button type="submit" class="btn">
+                        <span class="btn-text">Subscribe to Fitness Updates</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Submitting...
+                        </span>
+                    </button>
+                </form>
+                <div id="formSuccess" class="form-success" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Subscription Successful!</h3>
+                    <p>Thank you for subscribing, we'll send you regular updates on fitness news and research findings.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 NYC Income and Gym Correlation Study</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+    document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // 显示加载状态
+        const btn = this.querySelector('button[type="submit"]');
+        const btnText = btn.querySelector('.btn-text');
+        const btnLoading = btn.querySelector('.btn-loading');
+        
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline-block';
+        
+        // 模拟表单提交
+        setTimeout(() => {
+            // 隐藏表单
+            this.style.display = 'none';
+            
+            // 显示成功消息
+            document.getElementById('formSuccess').style.display = 'block';
+            
+            // 重置表单
+            this.reset();
+            
+            // 恢复按钮状态
+            btnText.style.display = 'inline-block';
+            btnLoading.style.display = 'none';
+        }, 1500);
+    });
+
+    // 表单验证
+    const inputs = document.querySelectorAll('input[required]');
+    inputs.forEach(input => {
+        input.addEventListener('input', function() {
+            const validationMessage = this.nextElementSibling;
+            if (this.validity.valid) {
+                validationMessage.textContent = '';
+                this.classList.remove('invalid');
+                this.classList.add('valid');
+            } else {
+                validationMessage.textContent = this.title;
+                this.classList.remove('valid');
+                this.classList.add('invalid');
+            }
+        });
+    });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,530 @@
+/* 数据页面专用样式 */
+.data-panel {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+.data-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.data-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f5f5f5;
+    padding-bottom: 1rem;
+}
+
+.data-header i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--primary-color);
+    background: rgba(255, 133, 162, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-header h3 {
+    margin-bottom: 0;
+}
+
+.dual-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.income-circle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.income-bubble {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.income-bubble:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.income-bubble .region {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.income-bubble .value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0.3rem;
+}
+
+.income-bubble .icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.9rem;
+}
+
+.progress-bars {
+    margin: 2rem 0;
+}
+
+.progress-item {
+    margin-bottom: 1.2rem;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.progress-label {
+    display: flex;
+    align-items: center;
+}
+
+.progress-label i {
+    margin-right: 0.5rem;
+    width: 20px;
+    text-align: center;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.correlation-card {
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    background: linear-gradient(135deg, #f9f9f9 0%, #f1f1f1 100%);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.correlation-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.correlation-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.correlation-text h4 {
+    margin-bottom: 0.3rem;
+}
+
+.correlation-text p {
+    margin-bottom: 0;
+}
+
+.data-table-container {
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+}
+
+.data-table {
+    width: 100%;
+    min-width: 800px;
+}
+
+.interactive-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+}
+
+.control-group label {
+    margin-right: 0.5rem;
+    font-weight: 600;
+}
+
+#region-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+}
+
+.filter-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* 地区特定颜色 */
+.upper-east-color {
+    background: linear-gradient(135deg, #ff85a2 0%, #ff6b8b 100%);
+}
+
+.upper-west-color {
+    background: linear-gradient(135deg, #7ac7c4 0%, #5aadaa 100%);
+}
+
+.midtown-color {
+    background: linear-gradient(135deg, #ffd452 0%, #ffcb38 100%);
+}
+
+.downtown-color {
+    background: linear-gradient(135deg, #5d9cec 0%, #4a89dc 100%);
+}
+
+.chinatown-color {
+    background: linear-gradient(135deg, #ff5733 0%, #e84118 100%);
+}
+
+/* 动画效果 */
+.fade-in {
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .income-circle {
+        justify-content: center;
+    }
+    
+    .income-bubble {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .correlation-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .correlation-icon {
+        margin: 0 auto 1rem;
+    }
+    
+    .income-bubble {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .income-bubble .region {
+        font-size: 0.7rem;
+    }
+    
+    .income-bubble .value {
+        font-size: 0.9rem;
+    }
+}
+
+/* Data Analysis Page Styles */
+.data-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.data-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.data-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Data Overview Section */
+.data-overview {
+    padding: 4rem 0;
+    background: white;
+}
+
+.data-filters {
+    margin-bottom: 2rem;
+}
+
+.filter-controls {
+    background: var(--light-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.filter-group select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.data-display {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Data Visualization Section */
+.data-visualization {
+    padding: 4rem 0;
+    background: var(--light-color);
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.chart-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.chart-card h4 {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.chart-container {
+    height: 300px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.chart-info {
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.chart-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Data Insights Section */
+.data-insights {
+    padding: 4rem 0;
+    background: white;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.insight-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+}
+
+.insight-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.5rem;
+}
+
+.insight-card h4 {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.insight-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Methodology Section */
+.methodology {
+    padding: 4rem 0;
+    background: var(--light-color);
+}
+
+.methodology-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.methodology-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.methodology-card h4 {
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+    position: relative;
+}
+
+.methodology-card h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.methodology-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.methodology-card li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.methodology-card li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .data-hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .data-hero h2 {
+        font-size: 2rem;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .chart-container {
+        height: 250px;
+    }
+
+    .methodology-content {
+        grid-template-columns: 1fr;
+    }
+} 

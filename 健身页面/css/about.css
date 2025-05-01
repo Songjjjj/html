@@ -1,0 +1,619 @@
+/* 关于研究页面专用样式 */
+:root {
+    --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, #ff5b79 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--secondary-color) 0%, #4cbfbc 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, #ffbc00 100%);
+    --shadow-elevation-1: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.07);
+    --shadow-elevation-2: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.09);
+    --shadow-elevation-3: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.11);
+}
+
+/* 页面横幅 */
+.page-banner {
+    background: var(--gradient-primary);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-elevation-2);
+}
+
+.page-banner:before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    top: -150px;
+    right: -150px;
+}
+
+.page-banner:after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    bottom: -100px;
+    left: -100px;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.banner-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 800;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.banner-content p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 内容卡片 */
+.about-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-elevation-1);
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border-top: 5px solid var(--primary-color);
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-elevation-3);
+}
+
+.about-card:nth-child(2) {
+    border-top: 5px solid var(--secondary-color);
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.about-header i {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    color: var(--primary-color);
+    background: rgba(255, 133, 162, 0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(255, 133, 162, 0.2);
+}
+
+.about-card:nth-child(2) .about-header i {
+    color: var(--secondary-color);
+    background: rgba(122, 199, 196, 0.1);
+    box-shadow: 0 5px 15px rgba(122, 199, 196, 0.2);
+}
+
+.about-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    color: var(--dark-color);
+}
+
+.about-content {
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+}
+
+.about-content ul {
+    margin-left: 1.5rem;
+}
+
+.about-content ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.about-content strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* 数据卡片 */
+.research-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.data-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-elevation-2);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-elevation-3);
+}
+
+.card-header {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header.secondary-header {
+    background: var(--gradient-secondary);
+}
+
+.card-header h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card-header h3 i {
+    margin-right: 1rem;
+    font-size: 1.8rem;
+}
+
+.card-header::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    top: -125px;
+    right: -125px;
+}
+
+.card-header::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: -75px;
+    left: -75px;
+}
+
+.card-content {
+    padding: 2rem;
+    flex: 1;
+}
+
+/* 图片容器 */
+.image-container {
+    position: relative;
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.research-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover .research-image {
+    transform: scale(1.05);
+}
+
+.image-placeholder {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.image-container:hover .image-placeholder {
+    opacity: 1;
+}
+
+.image-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.image-container:hover .image-placeholder i {
+    transform: translateY(0);
+}
+
+.image-placeholder p {
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.image-container:hover .image-placeholder p {
+    transform: translateY(0);
+}
+
+/* 表格样式 */
+.data-table-container {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: var(--dark-color);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+td i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+tr:hover {
+    background: #f9f9f9;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* 结论卡片 */
+.conclusion-card {
+    background: var(--gradient-accent);
+    color: var(--darker-color);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-elevation-2);
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.conclusion-card::before, .conclusion-card::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.conclusion-card::before {
+    width: 300px;
+    height: 300px;
+    bottom: -150px;
+    left: -150px;
+}
+
+.conclusion-card::after {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    right: -100px;
+}
+
+.conclusion-card h3 {
+    color: var(--darker-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.conclusion-card h3 i {
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.conclusion-card p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.conclusion-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.stat-item {
+    flex: 1 1 30%;
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.8rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin: 0.5rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+    color: var(--darker-color);
+}
+
+.stat-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--darker-color);
+}
+
+.conclusion-card .btn {
+    position: relative;
+    z-index: 2;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* 团队成员 */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.team-member {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-elevation-1);
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-elevation-3);
+}
+
+.team-member::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: var(--gradient-primary);
+    top: -125%;
+    left: -25%;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: 1;
+}
+
+.team-member:nth-child(2)::after {
+    background: var(--gradient-secondary);
+}
+
+.team-member:nth-child(3)::after {
+    background: var(--gradient-accent);
+}
+
+.team-member:hover::after {
+    top: -80%;
+}
+
+.member-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3.5rem;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(255, 133, 162, 0.4);
+}
+
+.team-member:nth-child(2) .member-avatar {
+    background: var(--secondary-color);
+    box-shadow: 0 5px 15px rgba(122, 199, 196, 0.4);
+}
+
+.team-member:nth-child(3) .member-avatar {
+    background: var(--accent-color);
+    box-shadow: 0 5px 15px rgba(255, 212, 82, 0.4);
+}
+
+.team-member:hover .member-avatar {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    margin-bottom: 0.7rem;
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem;
+}
+
+.team-member p {
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    color: var(--dark-color);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover p {
+    color: var(--darker-color);
+}
+
+/* 动画效果 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式调整 */
+@media (min-width: 768px) {
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .conclusion-stats {
+        flex-direction: column;
+    }
+    
+    .stat-item {
+        margin: 0.5rem 0;
+    }
+    
+    .about-header i {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .about-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .conclusion-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-banner {
+        padding: 3rem 1.5rem;
+    }
+    
+    .banner-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .banner-content p {
+        font-size: 1.1rem;
+    }
+    
+    .about-card, .team-member {
+        padding: 1.5rem;
+    }
+    
+    .about-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-header i {
+        margin: 0 0 1rem 0;
+    }
+    
+    .stat-value {
+        font-size: 2rem;
+    }
+} 

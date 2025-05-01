@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Research - NYC Income and Gym Correlation Study</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="main-header">
+            <div class="logo">
+                <h1><i class="fas fa-dumbbell"></i> NYC Fitness Research</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Fitness Info</a></li>
+                    <li><a href="data.html">Data Analysis</a></li>
+                    <li><a href="case-study.html">Case Studies</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-banner">
+                <div class="banner-content">
+                    <h2>Exploring the Connection Between Income and Fitness Culture</h2>
+                    <p>An in-depth study of how socioeconomic differences influence fitness facility distribution across five representative NYC districts</p>
+                </div>
+            </section>
+            
+            <section>
+                <div class="section-header">
+                    <h2><i class="fas fa-lightbulb"></i> Research Background & Objectives</h2>
+                    <p>We are dedicated to uncovering the intrinsic connection between urban socioeconomic stratification and fitness culture</p>
+                </div>
+                
+                <div class="about-card fade-in">
+                    <div class="about-header">
+                        <i class="fas fa-search"></i>
+                        <h3>Research Origins</h3>
+                    </div>
+                    <div class="about-content">
+                        <p>New York City, as one of the world's most diverse and economically stratified cities, provides us with a unique research environment. From the affluent communities of the Upper East Side to the immigrant enclaves of Chinatown, the income disparities between different areas are significant, reflected in various sociocultural indicators, including <strong>fitness culture</strong>.</p>
+                        <p>Our research began with a simple yet powerful observation: <strong>areas with higher income levels appear to have more fitness facilities</strong>. This phenomenon sparked our curiosity: Is this distribution merely coincidental, or does it reflect deeper socioeconomic factors at work? How is fitness culture shaped by income levels?</p>
+                    </div>
+                </div>
+                
+                <div class="about-card fade-in delay-1">
+                    <div class="about-header">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>Research Methodology</h3>
+                    </div>
+                    <div class="about-content">
+                        <p>To ensure scientific rigor and accuracy, we employed a systematic multi-method research strategy:</p>
+                        <ul>
+                            <li><strong>Data Collection</strong>: Analysis of government census and income data, combined with GIS mapping</li>
+                            <li><strong>Fitness Facility Census</strong>: Categorical statistics of all fitness facilities in five target areas, including gyms, yoga studios, and specialized studios</li>
+                            <li><strong>Survey Research</strong>: Collection of 832 valid questionnaires to understand fitness habits, expenditure, and preferences across different districts</li>
+                            <li><strong>Qualitative Research</strong>: 56 in-depth interviews conducted across regions to explore differentiated development of fitness culture</li>
+                            <li><strong>Statistical Analysis</strong>: Correlation analysis and regression modeling using SPSS and R to explore relationships between variables</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-bar"></i> Key Research Data</h2>
+                    <p>Income and fitness facility distribution data from five representative districts</p>
+                </div>
+                
+                <div class="research-grid">
+                    <div class="data-card fade-in">
+                        <div class="card-header">
+                            <h3><i class="fas fa-dollar-sign"></i> Per Capita Income Distribution</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="image-container">
+                                <img src="images/nyc-income-map.jpg" alt="NYC Income Distribution Map" class="research-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-chart-pie"></i>
+                                    <p>NYC Income Distribution Heat Map</p>
+                                </div>
+                            </div>
+                            <div class="data-table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>District</th>
+                                            <th>Annual Per Capita Income (USD)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fas fa-crown"></i> Upper East Side</td>
+                                            <td>120,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-leaf"></i> Upper West Side</td>
+                                            <td>105,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-building"></i> Midtown</td>
+                                            <td>95,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-chart-line"></i> Downtown</td>
+                                            <td>90,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-dragon"></i> Chinatown</td>
+                                            <td>45,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="data-card fade-in delay-1">
+                        <div class="card-header secondary-header">
+                            <h3><i class="fas fa-dumbbell"></i> Fitness Facility Distribution</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="image-container">
+                                <img src="images/nyc-gym-distribution.jpg" alt="NYC Gym Distribution Map" class="research-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <p>Fitness Facility Density Map</p>
+                                </div>
+                            </div>
+                            <div class="data-table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>District</th>
+                                            <th>Number of Gyms</th>
+                                            <th>Gyms per 100k Population</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fas fa-crown"></i> Upper East Side</td>
+                                            <td>85</td>
+                                            <td>42.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-leaf"></i> Upper West Side</td>
+                                            <td>72</td>
+                                            <td>36.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-building"></i> Midtown</td>
+                                            <td>110</td>
+                                            <td>55.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-chart-line"></i> Downtown</td>
+                                            <td>65</td>
+                                            <td>32.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fas fa-dragon"></i> Chinatown</td>
+                                            <td>18</td>
+                                            <td>9.0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-header">
+                    <h2><i class="fas fa-search-plus"></i> Research Findings & Insights</h2>
+                    <p>Our data analysis reveals strong correlations between income and fitness culture</p>
+                </div>
+                
+                <div class="conclusion-card fade-in delay-2">
+                    <h3><i class="fas fa-chart-line"></i> Key Findings</h3>
+                    <p>Our research clearly demonstrates a significant positive correlation between per capita income and fitness facility density (Pearson correlation coefficient r=0.87, p&lt;0.001). This relationship holds true even after controlling for population density and commercial development levels. While Midtown isn't the highest-income area, it has the highest density of fitness facilities due to its commercial nature and working population. Notably, the 2.7x income gap between Chinatown and the Upper East Side expands to a 4.7x difference in fitness facility density, suggesting this relationship may be non-linear.</p>
+                    
+                    <div class="conclusion-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">3.2x</div>
+                            <div class="stat-desc">Gym density increases by 3.2 (per 100k population) for every $10,000 increase in income</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">6.1x</div>
+                            <div class="stat-desc">High-income areas have 6.1 times more fitness facilities than low-income areas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">8.3x</div>
+                            <div class="stat-desc">Annual fitness spending in high-income areas is 8.3 times that of low-income areas</div>
+                        </div>
+                    </div>
+                    
+                    <a href="data.html" class="btn primary-btn">View Detailed Data Analysis <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </section>
+            
+            <section>
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> Research Team</h2>
+                    <p>Our interdisciplinary team brings together experts from sociology, economics, and public health</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member fade-in">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Professor Wang</h3>
+                        <p>Principal Investigator</p>
+                        <p>Ph.D. in Socioeconomics</p>
+                        <p>Harvard University Department of Sociology</p>
+                    </div>
+                    <div class="team-member fade-in delay-1">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Dr. Li</h3>
+                        <p>Data Analyst</p>
+                        <p>Statistics Expert</p>
+                        <p>MIT</p>
+                    </div>
+                    <div class="team-member fade-in delay-2">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Professor Zhang</h3>
+                        <p>Fitness Industry Consultant</p>
+                        <p>Public Health Expert</p>
+                        <p>New York University</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-dumbbell"></i> NYC Fitness Research</h3>
+                    <p>Exploring Income and Fitness Culture</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Fitness Info</a></li>
+                        <li><a href="data.html">Data Analysis</a></li>
+                        <li><a href="case-study.html">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> fitness@research.com</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-1234</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NYC Income and Gym Correlation Study | All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

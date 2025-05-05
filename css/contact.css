@@ -6,12 +6,13 @@
     --shadow-elevation-1: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.07);
     --shadow-elevation-2: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.09);
     --shadow-elevation-3: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.11);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* 页面横幅 */
+/* 页面横幅增强 */
 .fitness-banner {
     background: var(--gradient-primary);
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
     color: white;
     position: relative;
@@ -26,6 +27,7 @@
     position: absolute;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+    animation: pulse 3s ease-in-out infinite;
 }
 
 .fitness-banner::before {
@@ -33,6 +35,7 @@
     height: 300px;
     top: -150px;
     right: -150px;
+    animation-delay: 0s;
 }
 
 .fitness-banner::after {
@@ -40,6 +43,18 @@
     height: 200px;
     bottom: -100px;
     left: -100px;
+    animation-delay: 1.5s;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
 }
 
 .banner-content {
@@ -47,167 +62,136 @@
     z-index: 2;
     max-width: 800px;
     margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
 }
 
 .banner-content h2 {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
     color: white;
     font-weight: 800;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .banner-content p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
-/* 资讯卡片网格 */
-.fitness-news-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2.5rem;
-    margin: 3rem 0;
-}
-
-@media (min-width: 768px) {
-    .fitness-news-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-    .fitness-news-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.news-card {
+/* 费用表格样式增强 */
+.fitness-cost {
     background: white;
     border-radius: var(--border-radius);
+    padding: 2rem;
     box-shadow: var(--shadow-elevation-1);
-    overflow: hidden;
-    transition: all 0.4s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    margin: 2rem 0;
+    transition: var(--transition-bounce);
 }
 
-.news-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-elevation-3);
+.fitness-cost:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-elevation-2);
 }
 
-.card-image {
-    height: 200px;
-    overflow: hidden;
-    position: relative;
+.cost-table {
+    overflow-x: auto;
+    margin: 2rem 0;
 }
 
-.card-image img {
+.cost-table table {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
 }
 
-.news-card:hover .card-image img {
-    transform: scale(1.05);
+.cost-table th,
+.cost-table td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
 }
 
-.card-tag {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: var(--primary-color);
+.cost-table th {
+    background: var(--gradient-primary);
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.news-card:nth-child(2) .card-tag {
-    background: var(--secondary-color);
-}
-
-.news-card:nth-child(3) .card-tag {
-    background: var(--accent-color);
-    color: var(--darker-color);
-}
-
-.card-content {
-    padding: 1.8rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-meta {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+    letter-spacing: 1px;
     font-size: 0.9rem;
-    color: #777;
 }
 
-.card-meta i {
+.cost-table th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.cost-table th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.cost-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.cost-table td i {
     margin-right: 0.5rem;
     color: var(--primary-color);
 }
 
-.card-meta span {
-    margin-right: 1.5rem;
+/* 额外费用列表样式 */
+.cost-extra {
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.cost-extra h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
-.card-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    line-height: 1.4;
+.cost-extra ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.card-content p {
-    margin-bottom: 1.5rem;
-    flex: 1;
-}
-
-.card-link {
-    align-self: flex-start;
-    display: inline-flex;
+.cost-extra li {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
     align-items: center;
-    color: var(--primary-color);
-    font-weight: 700;
+    gap: 1rem;
     transition: all 0.3s ease;
-    margin-top: auto;
-    padding-top: 1rem;
-    border-top: 1px solid #f0f0f0;
-    width: 100%;
 }
 
-.card-link i {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
+.cost-extra li:last-child {
+    border-bottom: none;
 }
 
-.card-link:hover {
-    color: var(--primary-dark);
+.cost-extra li:hover {
+    background: white;
+    transform: translateX(10px);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-elevation-1);
 }
 
-.card-link:hover i {
-    transform: translateX(5px);
+.cost-extra li i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
 }
 
-/* 专家健身建议 */
+/* 专家建议卡片增强 */
 .expert-tips {
     background: var(--light-color);
-    padding: 3.5rem 2rem;
+    padding: 4rem 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-elevation-1);
     margin: 3rem 0;
@@ -219,7 +203,7 @@
 }
 
 .tips-header h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     position: relative;
     display: inline-block;
     padding-bottom: 1rem;
@@ -231,7 +215,7 @@
     position: absolute;
     height: 3px;
     width: 50%;
-    background: var(--primary-color);
+    background: var(--gradient-primary);
     bottom: 0;
     left: 25%;
     border-radius: 2px;
@@ -239,14 +223,8 @@
 
 .tips-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-}
-
-@media (min-width: 768px) {
-    .tips-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 .tip-item {
@@ -254,82 +232,109 @@
     border-radius: var(--border-radius);
     padding: 2rem;
     box-shadow: var(--shadow-elevation-1);
-    display: flex;
-    align-items: flex-start;
-    transition: all 0.3s ease;
+    transition: var(--transition-bounce);
+    position: relative;
+    overflow: hidden;
+}
+
+.tip-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
 }
 
 .tip-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: var(--shadow-elevation-2);
+}
+
+.tip-item:hover::before {
+    transform: scaleX(1);
 }
 
 .tip-icon {
     background: rgba(255, 133, 162, 0.1);
     color: var(--primary-color);
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.6rem;
-    margin-right: 1.5rem;
-    box-shadow: 0 5px 15px rgba(255, 133, 162, 0.15);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
 }
 
-.tip-item:nth-child(even) .tip-icon {
-    background: rgba(122, 199, 196, 0.1);
-    color: var(--secondary-color);
-    box-shadow: 0 5px 15px rgba(122, 199, 196, 0.15);
+.tip-item:hover .tip-icon {
+    transform: scale(1.1) rotate(10deg);
 }
 
 .tip-content h4 {
-    margin-bottom: 0.8rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
 }
 
 .tip-content p {
-    margin-bottom: 0;
+    color: var(--dark-color);
     line-height: 1.7;
+    opacity: 0.9;
 }
 
-/* 联系表单样式增强 */
+/* 表单样式增强 */
 .contact-form {
     background: white;
     border-radius: var(--border-radius);
-    padding: 3rem 2rem;
+    padding: 3rem;
     box-shadow: var(--shadow-elevation-2);
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    border-top: 5px solid var(--primary-color);
+    margin: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-primary);
 }
 
 .contact-form h2 {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--dark-color);
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 .form-group {
+    margin-bottom: 2rem;
     position: relative;
-    margin-bottom: 1.5rem;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.8rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--dark-color);
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 1rem;
-    border: 1px solid #e1e1e1;
+    border: 2px solid #eee;
     border-radius: var(--border-radius);
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -337,7 +342,8 @@
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(255, 133, 162, 0.2);
     outline: none;
@@ -356,153 +362,8 @@
     color: #ff4444;
 }
 
-input.valid {
-    border-color: #00C851 !important;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300C851' width='18px' height='18px'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") no-repeat right 10px center/20px auto !important;
-    padding-right: 40px !important;
-}
-
-input.invalid {
-    border-color: #ff4444 !important;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff4444' width='18px' height='18px'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E") no-repeat right 10px center/20px auto !important;
-    padding-right: 40px !important;
-}
-
-.btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
-    box-shadow: 0 5px 15px rgba(255, 133, 162, 0.3);
-}
-
-.btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 133, 162, 0.4);
-}
-
-/* 按钮加载动画 */
-.btn-loading {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-loading i {
-    margin-right: 0.5rem;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.fa-spinner {
-    animation: spin 1s linear infinite;
-}
-
-/* 表单成功消息 */
-.form-success {
-    text-align: center;
-    padding: 2rem;
-    background: #f8fff8;
-    border-radius: var(--border-radius);
-    border: 1px solid #00C851;
-    margin-top: 2rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideUp 0.5s ease forwards;
-}
-
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.form-success i {
-    font-size: 3rem;
-    color: #00C851;
-    margin-bottom: 1rem;
-}
-
-.form-success h3 {
-    color: #00C851;
-    margin-bottom: 0.5rem;
-}
-
-/* 图片加载优化 */
-.card-image {
-    position: relative;
-    background: #f0f0f0;
-}
-
-.card-image::before {
-    content: '';
-    display: block;
-    padding-top: 66.67%; /* 3:2 宽高比 */
-}
-
-.card-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
-}
-
-.card-image img[loading] {
-    opacity: 0;
-}
-
-.card-image img.loaded {
-    opacity: 1;
-}
-
-/* 图片加载占位动画 */
-.card-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.card-image img.loaded + .card-image::after {
-    opacity: 0;
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
-}
-
-/* 响应式调整 */
+/* 响应式优化 */
 @media (max-width: 768px) {
-    .fitness-banner {
-        padding: 3.5rem 1.5rem;
-    }
-    
     .banner-content h2 {
         font-size: 2.2rem;
     }
@@ -511,69 +372,69 @@ input.invalid {
         font-size: 1.1rem;
     }
     
-    .expert-tips {
-        padding: 2.5rem 1.5rem;
+    .cost-table {
+        font-size: 0.9rem;
+    }
+    
+    .cost-table th,
+    .cost-table td {
+        padding: 0.8rem;
     }
     
     .tip-item {
         padding: 1.5rem;
     }
     
-    .form-group {
-        margin-bottom: 2rem;
-    }
-    
-    .form-validation-message {
-        font-size: 0.8rem;
-    }
-    
-    .form-success {
-        padding: 1.5rem;
-    }
-    
-    .form-success i {
-        font-size: 2.5rem;
+    .contact-form {
+        padding: 2rem;
     }
 }
 
 @media (max-width: 480px) {
-    .fitness-banner {
-        padding: 3rem 1rem;
-    }
-    
     .banner-content h2 {
         font-size: 1.8rem;
     }
     
-    .card-meta {
+    .cost-extra li {
         flex-direction: column;
         align-items: flex-start;
-    }
-    
-    .card-meta span {
-        margin-bottom: 0.5rem;
+        gap: 0.5rem;
     }
     
     .tip-item {
-        flex-direction: column;
-        align-items: center;
         text-align: center;
     }
     
     .tip-icon {
-        margin-right: 0;
-        margin-bottom: 1.5rem;
+        margin: 0 auto 1.5rem;
     }
-    
-    .form-success {
-        padding: 1rem;
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    
-    .form-success i {
-        font-size: 2rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-    
-    .btn-loading span {
-        font-size: 0.9rem;
-    }
-} 
+}
+
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}

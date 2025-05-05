@@ -1,9 +1,9 @@
-/* 首页特有样式 */
+
 .home-page {
     background-color: var(--lighter-color);
 }
 
-/* 英雄区样式 */
+
 .hero-container {
     position: relative;
     display: flex;
@@ -117,9 +117,9 @@
     50% {
         transform: translateY(-20px);
     }
+
 }
 
-/* 动画文本 */
 .animate-text {
     opacity: 0;
     transform: translateY(20px);
@@ -141,7 +141,7 @@
     }
 }
 
-/* 地区卡片样式 */
+
 .region-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -274,7 +274,7 @@
     transform: translateX(5px);
 }
 
-/* 核心发现样式 */
+
 .findings-container {
     display: flex;
     flex-wrap: wrap;
@@ -344,7 +344,6 @@
     opacity: 0.8;
 }
 
-/* CTA区域样式 */
 .cta-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: 4rem 2rem;

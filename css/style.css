@@ -410,7 +410,7 @@ section p {
     margin: 0 auto;
 }
 
-/* 全局样式 */
+
 :root {
     --primary-color: #ff85a2;
     --primary-dark: #e76b88;
@@ -583,7 +583,7 @@ section {
     opacity: 0.8;
 }
 
-/* 主页导航栏样式 */
+
 .main-header {
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
@@ -869,7 +869,6 @@ footer {
     margin-top: 2rem;
 }
 
-/* 健身资讯页样式 */
 .contact-intro {
     text-align: center;
     max-width: 800px;
@@ -1057,5 +1056,134 @@ footer {
 
     .case-details {
         grid-template-columns: 300px 1fr;
+    }
+}
+
+.enhanced-footer {
+    background: #222;
+    color: #fff;
+    padding: 40px 20px 10px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3a86ff;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.footer-section.about p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.footer-section.about .contact p {
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+.footer-section.about .contact i {
+    margin-right: 8px;
+    color: #3a86ff;
+}
+
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section.links ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section.links ul li a:hover {
+    color: #3a86ff;
+    padding-left: 5px;
+}
+
+.footer-section.social .social-icons {
+    margin-bottom: 15px;
+}
+
+.footer-section.social .social-icons a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #333;
+    color: #fff;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.footer-section.social .social-icons a:hover {
+    background: #3a86ff;
+    transform: translateY(-3px);
+}
+
+.footer-section.social .subscription .subscribe-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #3a86ff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.footer-section.social .subscription .subscribe-link:hover {
+    background: #1a66ff;
+}
+
+.footer-section.social .subscription .subscribe-link i {
+    margin-right: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    color: #888;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
     }
 } 

@@ -1,4 +1,4 @@
-/* 数据页面专用样式 */
+
 .data-panel {
     background: white;
     border-radius: var(--border-radius);
@@ -215,7 +215,6 @@
     background: var(--primary-dark);
 }
 
-/* 地区特定颜色 */
 .upper-east-color {
     background: linear-gradient(135deg, #ff85a2 0%, #ff6b8b 100%);
 }
@@ -236,7 +235,6 @@
     background: linear-gradient(135deg, #ff5733 0%, #e84118 100%);
 }
 
-/* 动画效果 */
 .fade-in {
     animation: fadeIn 0.8s forwards;
 }
@@ -252,7 +250,7 @@
     }
 }
 
-/* 响应式调整 */
+
 @media (max-width: 768px) {
     .income-circle {
         justify-content: center;

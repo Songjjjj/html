@@ -85,7 +85,7 @@
                         </div>
                         <div class="card-content">
                             <div class="image-container">
-                                <img src="images/nyc-income-map.jpg" alt="NYC Income Distribution Map" class="research-image">
+                                <img src="images\14ef5184425b694f5d2b28e9fe2db6f.jpg" alt="NYC Income Distribution Map" class="research-image">
                                 <div class="image-placeholder">
                                     <i class="fas fa-chart-pie"></i>
                                     <p>NYC Income Distribution Heat Map</p>
@@ -132,7 +132,7 @@
                         </div>
                         <div class="card-content">
                             <div class="image-container">
-                                <img src="images/nyc-gym-distribution.jpg" alt="NYC Gym Distribution Map" class="research-image">
+                                <img src="images\426b792afeb21b08e8f64bc8b418f5e.jpg" alt="NYC Gym Distribution Map" class="research-image">
                                 <div class="image-placeholder">
                                     <i class="fas fa-map-marked-alt"></i>
                                     <p>Fitness Facility Density Map</p>
@@ -247,35 +247,70 @@
                 </div>
             </section>
         </main>
-
-        <footer>
+        
+        <!-- 统一的增强页脚 -->
+        <footer class="enhanced-footer">
             <div class="footer-content">
-                <div class="footer-logo">
+                <div class="footer-section about">
                     <h3><i class="fas fa-dumbbell"></i> NYC Fitness Research</h3>
-                    <p>Exploring Income and Fitness Culture</p>
+                    <p>Exploring the correlation between income distribution and fitness facilities across New York City.</p>
+                    <div class="contact">
+                        <p><i class="fas fa-envelope"></i> contact@nycfitnessresearch.org</p>
+                        <p><i class="fas fa-phone"></i> (212) 555-7890</p>
+                    </div>
                 </div>
-                <div class="footer-nav">
-                    <h4>Quick Navigation</h4>
+                
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Fitness Info</a></li>
+                        <li><a href="about.html">About Research</a></li>
+                        <li><a href="contact.html">Fitness News</a></li>
                         <li><a href="data.html">Data Analysis</a></li>
                         <li><a href="case-study.html">Case Studies</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p><i class="fas fa-envelope"></i> fitness@research.com</p>
-                    <p><i class="fas fa-phone"></i> (212) 555-1234</p>
+                
+                <div class="footer-section social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <p class="subscription">
+                        <a href="contact.html#subscribe" class="subscribe-link">
+                            <i class="fas fa-paper-plane"></i> Subscribe to Newsletter
+                        </a>
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 NYC Income and Gym Correlation Study | All Rights Reserved</p>
+                <p>&copy; 2023 NYC Income and Gym Distribution Research | All Rights Reserved</p>
             </div>
         </footer>
-    </div>
 
-    <script src="js/script.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const fadeElements = document.querySelectorAll('.fade-in');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, {
+                    threshold: 0.1
+                });
+                
+                fadeElements.forEach(element => {
+                    observer.observe(element);
+                });
+            });
+        </script>
+    </div>
 </body>
 </html> 

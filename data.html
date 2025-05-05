@@ -37,29 +37,7 @@
             </div>
         </section>
 
-        <section class="data-overview container">
-            <div class="data-filters">
-                <h3>Filter Data</h3>
-                <div class="filter-controls">
-                    <div class="filter-group">
-                        <label for="region-select">Select Region:</label>
-                        <select id="region-select">
-                            <option value="all">All Regions</option>
-                            <option value="upper-east">Upper East Side</option>
-                            <option value="upper-west">Upper West Side</option>
-                            <option value="midtown">Midtown</option>
-                            <option value="downtown">Downtown</option>
-                            <option value="chinatown">Chinatown</option>
-                        </select>
-                    </div>
-                    <button id="filter-btn" class="btn btn-primary">Apply Filter</button>
-                </div>
-            </div>
-
-            <div id="filtered-data-display" class="data-display">
-                <p>Select a region to view detailed data</p>
-            </div>
-        </section>
+       
 
         <section class="data-visualization container">
             <h3>Key Correlations</h3>
@@ -179,36 +157,46 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>NYC Fitness Research</h3>
-                    <p>Exploring the relationship between income levels and fitness facility distribution in New York City</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="about.html">About the Research</a></li>
-                        <li><a href="data.html">Data Analysis</a></li>
-                        <li><a href="case-study.html">Case Studies</a></li>
-                        <li><a href="contact.html">Fitness News</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Email: research@nycfitness.org</p>
-                    <p>Phone: (212) 555-0123</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
+    <!-- 统一的增强页脚 -->
+    <footer class="enhanced-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3><i class="fas fa-dumbbell"></i> NYC Fitness Research</h3>
+                <p>Exploring the correlation between income distribution and fitness facilities across New York City.</p>
+                <div class="contact">
+                    <p><i class="fas fa-envelope"></i> contact@nycfitnessresearch.org</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-7890</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 NYC Income and Gym Distribution Research. All rights reserved.</p>
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Research</a></li>
+                    <li><a href="contact.html">Fitness News</a></li>
+                    <li><a href="data.html">Data Analysis</a></li>
+                    <li><a href="case-study.html">Case Studies</a></li>
+                </ul>
             </div>
+            
+            <div class="footer-section social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p class="subscription">
+                    <a href="contact.html#subscribe" class="subscribe-link">
+                        <i class="fas fa-paper-plane"></i> Subscribe to Newsletter
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 NYC Income and Gym Distribution Research | All Rights Reserved</p>
         </div>
     </footer>
 

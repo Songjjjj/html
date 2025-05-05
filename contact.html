@@ -36,67 +36,6 @@
             </div>
         </div>
 
-        <section class="container">
-            <div class="section-header">
-                <h2>Latest Fitness News</h2>
-                <p>Stay updated with the latest trends and developments in NYC's fitness industry</p>
-            </div>
-
-            <div class="fitness-news-grid">
-                <div class="news-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                             alt="Luxury Fitness Club"
-                             loading="lazy"
-                             width="1470"
-                             height="980"
-                             onerror="this.onerror=null;this.src='images/placeholder-gym.jpg';">
-                        <div class="card-tag">News</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> 2023-11-15</span>
-                            <span><i class="far fa-user"></i> Researcher Li Ming</span>
-                        </div>
-                        <h3>Consumer Trends Analysis of Upper East Side Luxury Fitness Clubs</h3>
-                        <p>With rising income levels, luxury fitness clubs in the Upper East Side are experiencing significant membership growth. According to recent surveys, high-net-worth individuals' annual fitness spending has exceeded $5,000, a 35% increase from five years ago.</p>
-                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="news-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Fitness Studio">
-                        <div class="card-tag">Market Analysis</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> 2023-11-10</span>
-                            <span><i class="far fa-user"></i> Market Analyst Wang Hua</span>
-                        </div>
-                        <h3>Rise of Boutique Gyms in Midtown: Small Group Training Takes Center Stage</h3>
-                        <p>Boutique fitness studios in Midtown have seen explosive growth in the past two years, with small group professional training becoming popular among white-collar workers. Average per-class prices have increased from $35 to $50, yet booking rates remain above 85%.</p>
-                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="news-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Community Fitness">
-                        <div class="card-tag">Community Events</div>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> 2023-11-05</span>
-                            <span><i class="far fa-user"></i> Community Coordinator Zhang Wei</span>
-                        </div>
-                        <h3>Chinatown Community Fitness Program Receives City Government Funding</h3>
-                        <p>NYC government announces $1 million in funding for fitness facility upgrades in Chinatown and surrounding low-income communities, along with free fitness class programs. This initiative aims to bridge the fitness resource gap between different income groups.</p>
-                        <a href="#" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="container">
             <div class="section-header">
@@ -220,7 +159,7 @@
             </div>
         </section>
 
-        <section class="container">
+        <section class="container" id="subscribe">
             <div class="contact-form">
                 <h2><i class="fas fa-envelope"></i> Subscribe to Fitness Updates</h2>
                 <p>Want to receive regular updates on fitness news and research findings? Please leave your contact information</p>
@@ -277,16 +216,53 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 NYC Income and Gym Correlation Study</p>
+    <footer class="enhanced-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3><i class="fas fa-dumbbell"></i> NYC Fitness Research</h3>
+                <p>Exploring the correlation between income distribution and fitness facilities across New York City.</p>
+                <div class="contact">
+                    <p><i class="fas fa-envelope"></i> contact@nycfitnessresearch.org</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-7890</p>
+                </div>
+            </div>
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Research</a></li>
+                    <li><a href="contact.html">Fitness News</a></li>
+                    <li><a href="data.html">Data Analysis</a></li>
+                    <li><a href="case-study.html">Case Studies</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p class="subscription">
+                    <a href="#subscribe" class="subscribe-link">
+                        <i class="fas fa-paper-plane"></i> Subscribe to Newsletter
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 NYC Income and Gym Distribution Research | All Rights Reserved</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
     <script>
     document.getElementById('subscribeForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // 显示加载状态
+
         const btn = this.querySelector('button[type="submit"]');
         const btnText = btn.querySelector('.btn-text');
         const btnLoading = btn.querySelector('.btn-loading');
@@ -294,24 +270,21 @@
         btnText.style.display = 'none';
         btnLoading.style.display = 'inline-block';
         
-        // 模拟表单提交
+
         setTimeout(() => {
-            // 隐藏表单
+
             this.style.display = 'none';
             
-            // 显示成功消息
+
             document.getElementById('formSuccess').style.display = 'block';
-            
-            // 重置表单
+
             this.reset();
-            
-            // 恢复按钮状态
+
             btnText.style.display = 'inline-block';
             btnLoading.style.display = 'none';
         }, 1500);
     });
 
-    // 表单验证
     const inputs = document.querySelectorAll('input[required]');
     inputs.forEach(input => {
         input.addEventListener('input', function() {

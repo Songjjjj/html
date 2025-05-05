@@ -1,4 +1,4 @@
-/* 关于研究页面专用样式 */
+
 :root {
     --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, #ff5b79 100%);
     --gradient-secondary: linear-gradient(135deg, var(--secondary-color) 0%, #4cbfbc 100%);
@@ -8,7 +8,6 @@
     --shadow-elevation-3: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.11);
 }
 
-/* 页面横幅 */
 .page-banner {
     background: var(--gradient-primary);
     padding: 5rem 2rem;
@@ -143,7 +142,6 @@
     font-weight: 700;
 }
 
-/* 数据卡片 */
 .research-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -222,12 +220,12 @@
     flex: 1;
 }
 
-/* 图片容器 */
+
 .image-container {
     position: relative;
     background: var(--light-color);
     border-radius: var(--border-radius);
-    height: 250px;
+    height: 400px;
     overflow: hidden;
     margin-bottom: 1.8rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -324,7 +322,7 @@ tr:last-child td {
     border-bottom: none;
 }
 
-/* 结论卡片 */
+
 .conclusion-card {
     background: var(--gradient-accent);
     color: var(--darker-color);
@@ -427,7 +425,6 @@ tr:last-child td {
     margin-top: 1rem;
 }
 
-/* 团队成员 */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -552,7 +549,6 @@ tr:last-child td {
     }
 }
 
-/* 响应式调整 */
 @media (min-width: 768px) {
     .research-grid {
         grid-template-columns: repeat(2, 1fr);

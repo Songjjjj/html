@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // 响应式导航菜单切换
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-header nav');
     
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // 导航栏滚动效果
     const header = document.querySelector('header');
     if (header) {
         window.addEventListener('scroll', function() {
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // 数据页面的筛选功能
     const filterBtn = document.getElementById('filter-btn');
     if (filterBtn) {
         filterBtn.addEventListener('click', function() {
@@ -30,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (region === 'all') {
                 displayDiv.innerHTML = '<p>显示所有地区数据</p>';
+                // 这里可以添加展示所有数据的逻辑
             } else {
                 let regionName, income, gymCount, density, population, gymTypes;
                 
@@ -90,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // 联系表单提交处理
     const contactForm = document.querySelector('.contact-form form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -98,16 +103,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
             
+            // 简单表单验证
             if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
                 alert('请填写所有必填字段！');
                 return;
             }
             
+            // 模拟表单提交
             alert('感谢您的留言！我们会尽快回复。');
             contactForm.reset();
         });
     }
 
+    // 卡片悬停效果增强
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -118,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // 区域卡片悬停效果
     const regionCards = document.querySelectorAll('.region-card');
     if (regionCards.length > 0) {
         regionCards.forEach(card => {
@@ -130,7 +139,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // 为图表和数据可视化创建占位符
     function createPlaceholders() {
+        // 示例：为相关性图表创建占位符
         const correlationGraph = document.getElementById('correlation-graph');
         if (correlationGraph) {
             correlationGraph.innerHTML = `
@@ -141,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }
         
+        // 示例：为线性回归模型图创建占位符
         const regressionGraph = document.getElementById('regression-graph');
         if (regressionGraph) {
             regressionGraph.innerHTML = `
@@ -151,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }
         
+        // 示例：为对比柱状图创建占位符
         const incomeGymChart = document.getElementById('income-gym-chart');
         if (incomeGymChart) {
             incomeGymChart.innerHTML = `
@@ -163,6 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     createPlaceholders();
 
+    // 图片加载处理
     const images = document.querySelectorAll('img[loading="lazy"]');
     
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -180,6 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach(img => imageObserver.observe(img));
 });
 
+// Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-header nav');
@@ -190,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.querySelector('i').classList.toggle('fa-times');
     });
 
+    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
             nav.classList.remove('active');
@@ -199,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -212,6 +229,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Header Scroll Effect
 const header = document.querySelector('.main-header');
 let lastScroll = 0;
 
@@ -224,20 +242,24 @@ window.addEventListener('scroll', () => {
     }
     
     if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+        // Scroll Down
         header.classList.remove('scroll-up');
         header.classList.add('scroll-down');
     } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+        // Scroll Up
         header.classList.remove('scroll-down');
         header.classList.add('scroll-up');
     }
     lastScroll = currentScroll;
 });
 
+// Subscribe Form Handler
 const subscribeForm = document.getElementById('subscribeForm');
 if (subscribeForm) {
     subscribeForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
+        // 获取表单数据
         const formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
@@ -245,6 +267,7 @@ if (subscribeForm) {
             suggestion: document.getElementById('message').value
         };
 
+        // 显示加载状态
         const btn = this.querySelector('button[type="submit"]');
         const btnText = btn.querySelector('.btn-text');
         const btnLoading = btn.querySelector('.btn-loading');
@@ -269,20 +292,24 @@ if (subscribeForm) {
             
             this.style.display = 'none';
             
+            // 显示成功消息
             const successDiv = document.getElementById('formSuccess');
             successDiv.style.display = 'block';
             
+            // 重置表单
             this.reset();
             
         } catch (error) {
             console.error('提交失败:', error);
             alert('抱歉，提交失败，请稍后重试！');
         } finally {
+            // 恢复按钮状态
             btnText.style.display = 'inline-block';
             btnLoading.style.display = 'none';
         }
     });
 
+    // 实时表单验证
     const inputs = subscribeForm.querySelectorAll('input[required]');
     inputs.forEach(input => {
         input.addEventListener('input', function() {
@@ -294,6 +321,7 @@ if (subscribeForm) {
     });
 }
 
+// 输入验证函数
 function validateInput(input) {
     const validationMessage = input.nextElementSibling;
     if (input.validity.valid) {
@@ -307,6 +335,7 @@ function validateInput(input) {
     }
 }
 
+// 平滑滚动到表单
 document.querySelectorAll('a[href="#subscribe"]').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -316,6 +345,7 @@ document.querySelectorAll('a[href="#subscribe"]').forEach(link => {
     });
 });
 
+// Intersection Observer for Animations
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -331,10 +361,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Observe elements with animation classes
 document.querySelectorAll('.finding-card, .area-card, .highlight-item').forEach(el => {
     observer.observe(el);
 });
 
+// Dynamic Copyright Year
 document.querySelectorAll('.footer-bottom').forEach(footer => {
     const year = new Date().getFullYear();
     footer.innerHTML = footer.innerHTML.replace('2023', year);

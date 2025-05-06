@@ -262,7 +262,8 @@
     <script>
     document.getElementById('subscribeForm').addEventListener('submit', function(e) {
         e.preventDefault();
-
+        
+        // 显示加载状态
         const btn = this.querySelector('button[type="submit"]');
         const btnText = btn.querySelector('.btn-text');
         const btnLoading = btn.querySelector('.btn-loading');
@@ -270,21 +271,24 @@
         btnText.style.display = 'none';
         btnLoading.style.display = 'inline-block';
         
-
+        // 模拟表单提交
         setTimeout(() => {
-
+            // 隐藏表单
             this.style.display = 'none';
             
-
+            // 显示成功消息
             document.getElementById('formSuccess').style.display = 'block';
-
+            
+            // 重置表单
             this.reset();
-
+            
+            // 恢复按钮状态
             btnText.style.display = 'inline-block';
             btnLoading.style.display = 'none';
         }, 1500);
     });
 
+    // 表单验证
     const inputs = document.querySelectorAll('input[required]');
     inputs.forEach(input => {
         input.addEventListener('input', function() {
